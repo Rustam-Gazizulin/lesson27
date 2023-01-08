@@ -15,6 +15,6 @@
 from django.db import models
 
 
-# TODO здесь следует реализовать модель Store в соответствии со спецификацией
 class Store(models.Model):
-    pass
+    slug = models.CharField(max_length=10, unique=True)
+    name = models.CharField(max_length=30)
